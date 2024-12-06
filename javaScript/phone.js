@@ -37,17 +37,61 @@ const displayUsers = phones => {
   </div>
         `
         phoneContainer.appendChild(phoneCard)
-    })
+    });
+
+    // Hide Loading Spinner
+    toggleLoadingSpinner(false)
+
 }
 
-const handleSearch2 = () => {
-    const searchField = document.getElementById('search-field2');
-    const searchValue = searchField.value;
-    loadPhone(searchValue)
-}
-  
+
 const handleSearch = () => {
+    toggleLoadingSpinner(true)
     const searchField = document.getElementById('search-field');
     const searchValue = searchField.value;
     loadPhone(searchValue)
 }
+
+// Handle Search Recap
+/* const handleSearch2 = () => {
+    toggleLoadingSpinner(true)
+    const searchField = document.getElementById('search-field2');
+    const searchValue = searchField.value;
+    loadPhone(searchValue)
+} */
+
+
+const toggleLoadingSpinner = (isLoading) => {
+    const loadingSpinner = document.getElementById('loading-spinner');
+    if(isLoading){
+    loadingSpinner.classList.remove('hidden')
+    }else{
+        loadingSpinner.classList.add('hidden')
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* const toggleLoadingSpinner = (isLoading) => {
+    const loadingSpinner = document.getElementById('loading-spinner');
+    if(isLoading){
+        loadingSpinner.classList.remove('hidden');
+    }else{
+        loadingSpinner.classList.add('hidden');
+
+    }
+} */
