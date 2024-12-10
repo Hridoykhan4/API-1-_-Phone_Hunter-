@@ -43,7 +43,7 @@
       <div class="text-center text-2xl font-extrabold tracking-wider">
         <h3>Search Your Phone</h3>
       </div>
-      <section class="mt-5 w-1/2 mx-auto p-4 m-4 flex">
+      <section class="mt-5 sm:w-1/2 mx-auto p-4 m-4 flex md:flex-row flex-col">
         <input
           id="search-field"
           type="text"
@@ -52,7 +52,7 @@
         />
         <button
           onclick="handleSearch()"
-          class="btn bg-gradient-to-r text-center pl-8 pr-10 from-violet-300 to-red-400"
+          class="btn bg-gradient-to-r self-center mt-4 md:mt-0 text-center pl-8 pr-10 from-violet-300 to-red-400"
         >
           Search
         </button>
@@ -105,7 +105,7 @@
       <!-- Open the modal using ID.showModal() method -->
       <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box">
-          <h3 id="phone-name" class="text-3xl font-bold"></h3>
+          <h3 id="phone-name" class="text-3xl font-bold mb-3"></h3>
           <div id="show-detail-container">
 
           </div>
